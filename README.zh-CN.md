@@ -2,7 +2,7 @@
 
 [English](./README.md) | [简体中文](./README.zh-CN.md)
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-green)
+[![Java](https://img.shields.io/badge/Java-17-orange)] [![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 > 与 Spring Boot 解耦的声网（Agora）Java SDK：RTC / RTM / Signaling Token 生成、
 > 云端录制与频道管理 REST API、以及本地服务端录制（on-premise recording）桥接。
