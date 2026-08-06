@@ -1,6 +1,8 @@
 # agora-java-sdk
 
-[![Java](https://img.shields.io/badge/Java-17-orange)] [![License](https://img.shields.io/badge/license-Apache%202.0-green)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
+[![License](https://img.shields.io/badge/license-Apache%202.0-green)
 
 > Spring Boot independent Java SDK for Agora: RTC / RTM / signaling token generation,
 > Cloud Recording and Channel Management REST APIs, and the on-premise recording bridge.
