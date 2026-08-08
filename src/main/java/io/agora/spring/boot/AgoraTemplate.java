@@ -5,8 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import okhttp3.MediaType;
 
 /**
- * https://docs.agora.io/cn/Interactive%20Broadcast/rtc_channel_event?platform=RESTful
+ * Main entry point for the Agora Spring Boot integration. Provides token generation,
+ * channel management, and cloud recording operations.
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AgoraProperties
+ * @see AgoraChannelManagerAsyncOperations
+ * @see AgoraCloudRecordingAsyncOperations
  */
 
 @Slf4j

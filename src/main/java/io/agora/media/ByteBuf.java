@@ -6,7 +6,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Created by Li on 10/1/2016.
+ * A byte buffer utility for packing and unpacking primitive types and collections
+ * in little-endian byte order. Used internally by the Agora token serialization layer.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see Packable
+ * @see PackableEx
  */
 public class ByteBuf {
     ByteBuffer buffer = ByteBuffer.allocate(1024).order(ByteOrder.LITTLE_ENDIAN);

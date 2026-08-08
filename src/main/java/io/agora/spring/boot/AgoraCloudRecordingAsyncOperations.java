@@ -29,6 +29,14 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.function.Consumer;
 
+/**
+ * Asynchronous variant of {@link AgoraCloudRecordingOperations} for non-blocking
+ * cloud recording operations with callback-based responses.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AgoraCloudRecordingOperations
+ */
 public class AgoraCloudRecordingAsyncOperations extends AgoraCloudRecordingOperations {
 
 	public AgoraCloudRecordingAsyncOperations(AgoraTemplate agoraTemplate) {
