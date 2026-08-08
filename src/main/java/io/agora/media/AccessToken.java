@@ -6,7 +6,22 @@ import java.util.TreeMap;
 
 import static io.agora.media.Utils.crc32;
 
+/**
+ * Builds and parses Agora Access Tokens for authenticating users in RTC and RTM channels.
+ *
+ * <p>An access token is a dynamic key generated using the App ID, App Certificate,
+ * channel name, user ID, and privilege settings. It is used to authenticate
+ * users joining Agora channels.</p>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see RtcTokenBuilder
+ * @see io.agora.rtm.RtmTokenBuilder
+ */
 public class AccessToken {
+    /**
+     * Privilege types that can be granted to a token.
+     */
     public enum Privileges {
         kJoinChannel(1),
         kPublishAudioStream(2),
@@ -36,6 +51,14 @@ public class AccessToken {
     public PrivilegeMessage message;
     public int expireTimestamp;
 
+    /**
+     * Constructs an AccessToken with the specified parameters.
+     *
+     * @param appId          the Agora App ID
+     * @param appCertificate the Agora App Certificate
+     * @param channelName    the channel name
+     * @param uid            the user ID as a string
+     */
     public AccessToken(String appId, String appCertificate, String channelName, String uid) {
         this.appId = appId;
         this.appCertificate = appCertificate;
@@ -46,6 +69,12 @@ public class AccessToken {
         this.message = new PrivilegeMessage();
     }
 
+    /**
+     * Builds the access token string.
+     *
+     * @return the encoded token string, or an empty string if the App ID or App Certificate is invalid
+     * @throws Exception if an error occurs during signature generation or packing
+     */
     public String build() throws Exception {
         if (! Utils.isUUID(appId)) {
             return "";
@@ -66,14 +95,36 @@ public class AccessToken {
         return getVersion() + this.appId + Utils.base64Encode(content);
     }
 
+    /**
+     * Adds a privilege with an expiration timestamp to the token.
+     *
+     * @param privilege      the privilege type to add
+     * @param expireTimestamp the expiration timestamp in seconds since epoch
+     */
     public void addPrivilege(Privileges privilege, int expireTimestamp) {
         message.messages.put(privilege.intValue, expireTimestamp);
     }
 
+    /**
+     * Returns the token version string.
+     *
+     * @return the version string ("006")
+     */
     public static String getVersion() {
         return VER;
     }
 
+    /**
+     * Generates an HMAC-SHA256 signature for the token.
+     *
+     * @param appCertificate the App Certificate used as the HMAC key
+     * @param appID          the App ID
+     * @param channelName    the channel name
+     * @param uid            the user ID
+     * @param message        the raw message bytes to sign
+     * @return the HMAC-SHA256 signature bytes
+     * @throws Exception if an error occurs during signing
+     */
     public static byte[] generateSignature(String appCertificate, 
     		String appID, String channelName, String uid, byte[] message) throws Exception {
     	
@@ -89,6 +140,12 @@ public class AccessToken {
         return Utils.hmacSign(appCertificate, baos.toByteArray());
     }
 
+    /**
+     * Parses an access token string and populates this object's fields.
+     *
+     * @param token the token string to parse
+     * @return {@code true} if the token was parsed successfully, {@code false} otherwise
+     */
     public boolean fromString(String token) {
         if (!getVersion().equals(token.substring(0, Utils.VERSION_LENGTH))) {
             return false;

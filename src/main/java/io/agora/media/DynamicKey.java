@@ -3,8 +3,13 @@ package io.agora.media;
 import java.io.ByteArrayOutputStream;
 
 /**
- * Created by hefeng on 15/8/10.
- * Util to generate Agora media dynamic key.
+ * Utility to generate Agora media dynamic keys (version 1).
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see DynamicKey3
+ * @see DynamicKey4
+ * @see DynamicKey5
  */
 public class DynamicKey {
 

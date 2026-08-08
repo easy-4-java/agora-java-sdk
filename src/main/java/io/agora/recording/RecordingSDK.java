@@ -14,8 +14,17 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Java 的 API 是对 C++ 的 sample code 通过 jni 做的二次封装，因此和 C++ 提供的录制 API 在结构上稍有差异：Agora SDK （C++ 和 java 共有的 sample code）实现 C++ 录制 API 的接口，以及对 Callback 的处理，然后 jni 层封装 Agora SDK，最后通过 jni proxy 层提供 Native 的 Java 接口和类。
- * https://docs.agora.io/cn/Recording/API%20Reference/recording_java/index.html
+ * The Agora Recording SDK entry point. Provides methods to create, manage, and
+ * control server-side recording of Agora channels.
+ *
+ * <p>This is a JNI wrapper around the native C++ recording engine. It supports
+ * registering event handlers, joining/leaving channels, setting video layouts,
+ * and managing watermarks.</p>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see RecordingEventHandler
+ * @see DefaultRecordingEventHandler
  */
 @Slf4j
 public class RecordingSDK {

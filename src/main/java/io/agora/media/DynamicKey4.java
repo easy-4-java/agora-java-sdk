@@ -2,6 +2,15 @@ package io.agora.media;
 
 import java.io.ByteArrayOutputStream;
 
+/**
+ * Utility to generate Agora media dynamic keys (version 4) with service-type
+ * discrimination for public sharing, recording, and media channel services.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see DynamicKey3
+ * @see DynamicKey5
+ */
 public class DynamicKey4 {
 
     private static final String PUBLIC_SHARING_SERVICE = "APSS";

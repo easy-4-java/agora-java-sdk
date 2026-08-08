@@ -1,7 +1,11 @@
 package io.agora.spring.boot;
 
 /**
- * 声网相关的常量
+ * Constants used across the Agora Spring Boot integration, including
+ * API URLs, default UIDs, and storage path prefixes.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
  */
 public interface AgoraConstant {
 

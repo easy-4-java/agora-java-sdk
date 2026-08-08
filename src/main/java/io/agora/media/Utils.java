@@ -10,6 +10,14 @@ import java.security.SecureRandom;
 import java.util.Date;
 import java.util.zip.CRC32;
 
+/**
+ * Utility class providing cryptographic, encoding, and helper methods used
+ * throughout the Agora token generation SDK.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AccessToken
+ */
 public class Utils {
     public static final long HMAC_SHA256_LENGTH = 32;
     public static final int VERSION_LENGTH = 3;
