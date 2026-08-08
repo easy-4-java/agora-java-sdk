@@ -2,6 +2,17 @@ package io.agora.recording.common;
 
 import java.nio.ByteBuffer;
 
+/**
+ * Defines enumerations, constants, and inner classes used throughout the Agora Recording SDK.
+ *
+ * <p>This class contains error codes, warning codes, channel profiles, video/audio format types,
+ * frame structures, statistics classes, and layout configuration types used by the recording service.</p>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see RecordingConfig
+ * @see io.agora.recording.RecordingSDK
+ */
 public class Common{
   /* Error codes.
    * note： When using the Recording SDK, you may receive error codes from the Native SDK. See more <a href="https://docs.agora.io/en/Interactive%20Broadcast/API%20Reference/java/classio_1_1agora_1_1rtc_1_1_i_rtc_engine_event_handler_1_1_error_code.html"> Error Codes</a>.

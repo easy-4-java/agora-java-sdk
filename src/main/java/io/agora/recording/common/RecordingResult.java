@@ -3,6 +3,14 @@ package io.agora.recording.common;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * Represents the result of a recording session, including channel information,
+ * video dimensions, and timing statistics for first audio/video frame reception.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see io.agora.recording.DefaultRecordingEventHandler#leaveChannel()
+ */
 @Data
 @Builder
 public class RecordingResult {

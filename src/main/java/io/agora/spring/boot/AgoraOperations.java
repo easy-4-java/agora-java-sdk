@@ -24,8 +24,13 @@ import java.util.Objects;
 import java.util.function.Consumer;
 
 /**
- * Tim 接口集成
- * https://cloud.tencent.com/document/product/269/42440
+ * Abstract base class for Agora RESTful API operations. Provides common
+ * HTTP request methods and channel/user ID resolution utilities.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AgoraCloudRecordingOperations
+ * @see AgoraChannelManagerOperations
  */
 @Slf4j
 public abstract class AgoraOperations {
