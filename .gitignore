@@ -187,3 +187,8 @@ demos/**/*.mp4
 
 # 本地 dreamina CLI 采集输出
 .cli-audit/
+*.aac
+*.h264
+*.h265
+*.pcm
+*.yuv
