@@ -3,9 +3,13 @@ package io.agora.spring.boot;
 import java.text.MessageFormat;
 
 /**
- * https://docs.agora.io/cn/cloud-recording/cloud_recording_api_rest?platform=RESTful
- * https://docs.agora.io/cn/Video/channel_management_overview?platform=RESTful
+ * Enumeration of Agora RESTful API endpoint addresses for cloud recording,
+ * project management, user banning, and channel management operations.
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AgoraCloudRecordingOperations
+ * @see AgoraChannelManagerOperations
  */
 public enum AgoraApiAddress {
 

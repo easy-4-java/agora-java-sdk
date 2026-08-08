@@ -3,6 +3,17 @@ package io.agora.recording;
 import io.agora.recording.common.Common.*;
 import io.agora.recording.common.RecordingConfig;
 
+/**
+ * Event handler interface for receiving callbacks from the Agora Recording SDK.
+ *
+ * <p>Implement this interface to handle recording events such as user join/leave,
+ * audio/video frame reception, connection state changes, and error notifications.</p>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see DefaultRecordingEventHandler
+ * @see RecordingSDK
+ */
 public interface RecordingEventHandler {
 
   String getChannel();

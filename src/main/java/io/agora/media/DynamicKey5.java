@@ -6,7 +6,13 @@ import org.apache.commons.codec.binary.Hex;
 import java.util.TreeMap;
 
 /**
- * Created by Li on 10/1/2016.
+ * Utility to generate Agora media dynamic keys (version 5) with service-type
+ * discrimination, in-channel permissions, and Base64-encoded content.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see DynamicKey4
+ * @see AccessToken
  */
 public class DynamicKey5 {
     public final static String version = "005";

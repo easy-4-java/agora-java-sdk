@@ -42,10 +42,13 @@ class RecordFile {
 }
 
 /**
- * Agora应用程序发送回调通知
+ * Default implementation of {@link RecordingEventHandler} that handles recording callbacks,
+ * manages audio/video file output, and provides video mixing layout logic.
  *
- *  {https://docs.agora.io/cn/Recording/API%20Reference/recording_java/index.html}
- *  {https://docs.agora.io/cn/Recording/API%20Reference/recording_java/interfaceio_1_1agora_1_1recording_1_1_recording_event_handler.html}
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see RecordingEventHandler
+ * @see RecordingSDK
  */
 @Slf4j
 public class DefaultRecordingEventHandler implements RecordingEventHandler {

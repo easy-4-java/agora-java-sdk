@@ -1,5 +1,16 @@
 package io.agora.media;
 
+/**
+ * Builds RTC (Real-Time Communication) tokens for authenticating users in Agora channels.
+ *
+ * <p>This builder supports both integer UID and string user account based token generation.
+ * Tokens grant specific privileges (join, publish audio/video/data) to users.</p>
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AccessToken
+ * @see AccessToken.Privileges
+ */
 public class RtcTokenBuilder {
 	public enum Role {
         /**

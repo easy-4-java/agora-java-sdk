@@ -21,8 +21,13 @@ import io.agora.spring.boot.resp.ChannelUserStateResponse;
 import java.io.IOException;
 
 /**
- * 1、频道管理
- * https://docs.agora.io/cn/Video/channel_management_overview?platform=RESTful
+ * Operations for querying Agora channel information, including user state,
+ * user lists, and channel lists via the RESTful API.
+ *
+ * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 3.0.0
+ * @see AgoraChannelManagerAsyncOperations
+ * @see AgoraApiAddress
  */
 public class AgoraChannelManagerOperations extends AgoraOperations {
 
