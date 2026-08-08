@@ -400,7 +400,7 @@ class DefaultRecordingEventHandlerTest {
     void shouldLeaveChannel() {
         DefaultRecordingEventHandler handler = createHandler();
         if (handler != null) {
-            var result = handler.leaveChannel();
+            RecordingSDK.LeaveChannelResult result = handler.leaveChannel();
             assertNotNull(result);
             assertEquals("test-channel", result.getChannelId());
         }
