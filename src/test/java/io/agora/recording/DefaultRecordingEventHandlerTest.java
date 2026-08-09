@@ -2,6 +2,7 @@ package io.agora.recording;
 
 import io.agora.recording.common.Common;
 import io.agora.recording.common.Common.*;
+import io.agora.recording.common.RecordingResult;
 import io.agora.spring.boot.AgoraProperties;
 import io.agora.spring.boot.AgoraRecordingProperties;
 import org.junit.jupiter.api.BeforeEach;
@@ -400,7 +401,7 @@ class DefaultRecordingEventHandlerTest {
     void shouldLeaveChannel() {
         DefaultRecordingEventHandler handler = createHandler();
         if (handler != null) {
-            RecordingSDK.LeaveChannelResult result = handler.leaveChannel();
+            RecordingResult result = handler.leaveChannel();
             assertNotNull(result);
             assertEquals("test-channel", result.getChannelId());
         }
