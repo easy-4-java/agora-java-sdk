@@ -13,7 +13,7 @@ import static io.agora.media.Utils.crc32;
  * channel name, user ID, and privilege settings. It is used to authenticate
  * users joining Agora channels.</p>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see RtcTokenBuilder
  * @see io.agora.rtm.RtmTokenBuilder

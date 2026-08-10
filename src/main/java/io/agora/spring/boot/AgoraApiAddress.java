@@ -6,7 +6,7 @@ import java.text.MessageFormat;
  * Enumeration of Agora RESTful API endpoint addresses for cloud recording,
  * project management, user banning, and channel management operations.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraCloudRecordingOperations
  * @see AgoraChannelManagerOperations

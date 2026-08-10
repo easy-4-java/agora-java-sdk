@@ -5,7 +5,7 @@ import io.agora.media.AccessToken;
 /**
  * Builds RTM (Real-Time Messaging) tokens for authenticating users in Agora RTM services.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see io.agora.media.AccessToken
  */

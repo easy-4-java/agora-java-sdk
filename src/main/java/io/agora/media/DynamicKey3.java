@@ -5,7 +5,7 @@ import java.io.ByteArrayOutputStream;
 /**
  * Utility to generate Agora media dynamic keys (version 3) with UID and expiration support.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see DynamicKey
  * @see DynamicKey4

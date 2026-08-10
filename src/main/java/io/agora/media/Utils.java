@@ -14,7 +14,7 @@ import java.util.zip.CRC32;
  * Utility class providing cryptographic, encoding, and helper methods used
  * throughout the Agora token generation SDK.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AccessToken
  */

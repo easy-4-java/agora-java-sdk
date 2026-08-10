@@ -4,7 +4,7 @@ package io.agora.spring.boot;
  * Constants used across the Agora Spring Boot integration, including
  * API URLs, default UIDs, and storage path prefixes.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  */
 public interface AgoraConstant {
