@@ -7,7 +7,7 @@ import lombok.Data;
  * Represents the result of a recording session, including channel information,
  * video dimensions, and timing statistics for first audio/video frame reception.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see io.agora.recording.DefaultRecordingEventHandler#leaveChannel()
  */

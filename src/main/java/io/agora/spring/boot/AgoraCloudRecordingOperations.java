@@ -30,7 +30,7 @@ import java.util.Objects;
  * Synchronous operations for Agora Cloud Recording RESTful API, including
  * acquiring resources, starting/stopping recordings, updating layouts, and querying status.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraCloudRecordingAsyncOperations
  * @see AgoraApiAddress

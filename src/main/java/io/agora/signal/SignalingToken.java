@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * Utility class for generating Agora signaling tokens using MD5 hashing.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  */
 public class SignalingToken {

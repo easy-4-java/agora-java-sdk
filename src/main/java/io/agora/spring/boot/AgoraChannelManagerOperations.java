@@ -24,7 +24,7 @@ import java.io.IOException;
  * Operations for querying Agora channel information, including user state,
  * user lists, and channel lists via the RESTful API.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraChannelManagerAsyncOperations
  * @see AgoraApiAddress

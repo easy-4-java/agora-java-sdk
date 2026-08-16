@@ -6,7 +6,7 @@ import java.io.ByteArrayOutputStream;
  * Utility to generate Agora media dynamic keys (version 4) with service-type
  * discrimination for public sharing, recording, and media channel services.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see DynamicKey3
  * @see DynamicKey5

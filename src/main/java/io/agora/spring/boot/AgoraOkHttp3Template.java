@@ -38,7 +38,7 @@ import java.util.function.Consumer;
  * OkHttp3-based HTTP request template for making RESTful API calls to Agora services.
  * Supports synchronous and asynchronous requests with JSON serialization.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraOperations
  */

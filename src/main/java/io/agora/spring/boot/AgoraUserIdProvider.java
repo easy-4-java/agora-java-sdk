@@ -19,7 +19,7 @@ package io.agora.spring.boot;
  * Strategy interface for mapping between Agora channel names and user IDs.
  * Implementations can provide custom channel naming conventions.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraTemplate
  */

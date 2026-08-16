@@ -45,7 +45,7 @@ class RecordFile {
  * Default implementation of {@link RecordingEventHandler} that handles recording callbacks,
  * manages audio/video file output, and provides video mixing layout logic.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see RecordingEventHandler
  * @see RecordingSDK
