@@ -2,8 +2,8 @@ package io.agora.recording;
 
 import io.agora.recording.common.Common;
 import io.agora.recording.common.Common.*;
-import io.agora.spring.boot.AgoraProperties;
-import io.agora.spring.boot.AgoraRecordingProperties;
+import io.agora.cloud.AgoraProperties;
+import io.agora.cloud.AgoraRecordingProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

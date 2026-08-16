@@ -4,8 +4,8 @@ import io.agora.recording.common.Common;
 import io.agora.recording.common.Common.*;
 import io.agora.recording.common.RecordingConfig;
 import io.agora.recording.common.RecordingResult;
-import io.agora.spring.boot.AgoraProperties;
-import io.agora.spring.boot.AgoraRecordingProperties;
+import io.agora.cloud.AgoraProperties;
+import io.agora.cloud.AgoraRecordingProperties;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
