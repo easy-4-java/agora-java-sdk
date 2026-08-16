@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
  * Utility class for HMAC-SHA1 encoding and hex conversion, used by the
  * legacy dynamic key generation classes (v3, v4, v5).
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see DynamicKey
  * @see DynamicKey3

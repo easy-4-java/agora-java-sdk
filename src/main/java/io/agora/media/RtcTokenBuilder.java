@@ -6,7 +6,7 @@ package io.agora.media;
  * <p>This builder supports both integer UID and string user account based token generation.
  * Tokens grant specific privileges (join, publish audio/video/data) to users.</p>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AccessToken
  * @see AccessToken.Privileges

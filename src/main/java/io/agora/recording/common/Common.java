@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
  * <p>This class contains error codes, warning codes, channel profiles, video/audio format types,
  * frame structures, statistics classes, and layout configuration types used by the recording service.</p>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see RecordingConfig
  * @see io.agora.recording.RecordingSDK

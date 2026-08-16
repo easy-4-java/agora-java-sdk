@@ -4,7 +4,7 @@ package io.agora.media;
  * Extended interface for objects that can be both serialized (marshalled) and
  * deserialized (unmarshalled) to and from a {@link ByteBuf}.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see Packable
  * @see ByteBuf
