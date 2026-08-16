@@ -32,10 +32,9 @@
 - **频道管理** — REST 客户端操作：查询频道用户状态、频道用户列表、频道列表。
 - **本地录制** — `RecordingSDK`（JNI 桥接），对接声网录制端原生库，用于本地 / 私有化录制场景。
 
-SDK 核心（`io.agora.media`、`io.agora.recording`、`io.agora.rtm`、`io.agora.signal`
-包）无任何框架依赖。`io.agora.spring.boot` 包提供对 Spring 友好的门面
-（`AgoraTemplate`、`AgoraProperties`），但始终是纯 POJO 层——编译和运行都不依赖
-Spring 类。
+整个 SDK（包括 `io.agora.cloud` 包的 REST 门面 `AgoraTemplate`、`AgoraProperties`）
+都是纯 POJO 层——编译和运行都不依赖任何框架类。Spring Boot 集成由独立的
+`agora-spring-boot-starter` 项目提供。
 
 它不是：
 
@@ -88,7 +87,7 @@ Spring 类。
 | RTC client app   |   | agora-java-sdk (single jar)              |
 | (channel / uid)  |-->|  media   : RtcTokenBuilder, AccessToken  |
 | Agora Console    |   |  rtm/sig : RtmTokenBuilder, Signaling    |
-| (AppId / Cert)   |   |  spring.boot : AgoraTemplate, Operations |
+| (AppId / Cert)   |   |  cloud : AgoraTemplate, Operations |
 |                  |   |  recording : RecordingSDK (native)       |
 +------------------+   +---------------------+--------------------+
                                             |
@@ -155,7 +154,7 @@ public class TokenDemo {
 
 ## 7. 配置
 
-本库自身没有运行时配置文件。使用 `io.agora.spring.boot` 门面时，
+本库自身没有运行时配置文件。使用 `io.agora.cloud` 门面时，
 `AgoraProperties` 定义了属性前缀 `agora`（常量 `AgoraProperties.PREFIX`）。
 Spring Boot 中通过 `@ConfigurationProperties(prefix = "agora")` 绑定。
 
@@ -190,7 +189,7 @@ agora:
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.agora.spring.boot.*;
+import io.agora.cloud.*;
 import okhttp3.OkHttpClient;
 
 AgoraProperties props = new AgoraProperties();
@@ -220,7 +219,7 @@ CloudRecordingStartResponse start = template.opsForCloudRecording().startRecordi
 → `updateMixRecording(...)` / `updateIndividualRecording(...)` / `updateLayout(...)`
 → `queryRecording(channelName, uid, resourceId, sid, mode)` → `stopRecording(channelName, uid, resourceId, sid, mode, asyncStop)`。
 
-请求 / 响应模型位于 `io.agora.spring.boot.req` 与 `io.agora.spring.boot.resp`
+请求 / 响应模型位于 `io.agora.cloud.req` 与 `io.agora.cloud.resp`
 （如 `RecordingStorageConfig`、`TranscodingConfig`、`CloudRecordingQueryResponse`）。
 
 ## 9. 测试与构建

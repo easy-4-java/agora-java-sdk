@@ -29,7 +29,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class RecordingSDK {
 
-  private static List<String> libCache = new LinkedList();
+  private static final List<String> libCache = new LinkedList<>();
   private Map<String, RecordingEventHandler> recordingEventHandlers = null;
   private long nativeHandle = 0;
   /** The maximum length of the user account.  */

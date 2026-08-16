@@ -35,10 +35,10 @@ Agora (声网) platform services commonly needed by server-side applications:
 - **On-premise Recording** — a JNI bridge (`RecordingSDK`) to the Agora recording
   native library for local / on-premise recording scenarios.
 
-The SDK core (packages `io.agora.media`, `io.agora.recording`, `io.agora.rtm`,
-`io.agora.signal`) has no framework dependency. The `io.agora.spring.boot` package
-provides a Spring-friendly facade (`AgoraTemplate`, `AgoraProperties`) that stays a
-plain POJO layer — no Spring classes are required to compile or run it.
+The whole SDK (including the `io.agora.cloud` REST facade with `AgoraTemplate`
+and `AgoraProperties`) is a plain POJO layer — no Spring classes are required to
+compile or run it. Spring Boot integration is provided by the separate
+`agora-spring-boot-starter` project.
 
 What it is **not**:
 
@@ -93,7 +93,7 @@ Version lines:
 | RTC client app   |   | agora-java-sdk (single jar)              |
 | (channel / uid)  |-->|  media   : RtcTokenBuilder, AccessToken  |
 | Agora Console    |   |  rtm/sig : RtmTokenBuilder, Signaling    |
-| (AppId / Cert)   |   |  spring.boot : AgoraTemplate, Operations |
+| (AppId / Cert)   |   |  cloud : AgoraTemplate, Operations |
 |                  |   |  recording : RecordingSDK (native)       |
 +------------------+   +---------------------+--------------------+
                                             |
@@ -162,7 +162,7 @@ accepts for the channel until the expiry timestamp.
 ## 7. Configuration
 
 This library has no runtime configuration file of its own. When used with the
-`io.agora.spring.boot` facade, `AgoraProperties` defines the property prefix
+`io.agora.cloud` facade, `AgoraProperties` defines the property prefix
 `agora` (constant `AgoraProperties.PREFIX`). In Spring Boot, bind it with
 `@ConfigurationProperties(prefix = "agora")`.
 
@@ -198,7 +198,7 @@ agora:
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.agora.spring.boot.*;
+import io.agora.cloud.*;
 import okhttp3.OkHttpClient;
 
 AgoraProperties props = new AgoraProperties();
@@ -228,7 +228,7 @@ The operations follow the official Agora REST flow and map 1:1 to documented API
 → `updateMixRecording(...)` / `updateIndividualRecording(...)` / `updateLayout(...)`
 → `queryRecording(channelName, uid, resourceId, sid, mode)` → `stopRecording(channelName, uid, resourceId, sid, mode, asyncStop)`.
 
-Request/response models live in `io.agora.spring.boot.req` and `io.agora.spring.boot.resp`
+Request/response models live in `io.agora.cloud.req` and `io.agora.cloud.resp`
 (e.g. `RecordingStorageConfig`, `TranscodingConfig`, `CloudRecordingQueryResponse`).
 
 ## 9. Testing & Build
