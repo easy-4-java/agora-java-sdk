@@ -9,7 +9,7 @@ import java.util.TreeMap;
  * A byte buffer utility for packing and unpacking primitive types and collections
  * in little-endian byte order. Used internally by the Agora token serialization layer.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see Packable
  * @see PackableEx

@@ -3,7 +3,7 @@ package io.agora.recording.common;
 /**
  * The recording engine properties returned after successfully joining a channel.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see io.agora.recording.RecordingSDK#getProperties()
  */

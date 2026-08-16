@@ -8,7 +8,7 @@ import okhttp3.MediaType;
  * Main entry point for the Agora Spring Boot integration. Provides token generation,
  * channel management, and cloud recording operations.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraProperties
  * @see AgoraChannelManagerAsyncOperations

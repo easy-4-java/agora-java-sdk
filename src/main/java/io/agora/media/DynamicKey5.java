@@ -9,7 +9,7 @@ import java.util.TreeMap;
  * Utility to generate Agora media dynamic keys (version 5) with service-type
  * discrimination, in-channel permissions, and Base64-encoded content.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see DynamicKey4
  * @see AccessToken

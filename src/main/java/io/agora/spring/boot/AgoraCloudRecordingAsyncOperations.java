@@ -33,7 +33,7 @@ import java.util.function.Consumer;
  * Asynchronous variant of {@link AgoraCloudRecordingOperations} for non-blocking
  * cloud recording operations with callback-based responses.
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see AgoraCloudRecordingOperations
  */

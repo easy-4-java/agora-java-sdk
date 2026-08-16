@@ -9,7 +9,7 @@ import io.agora.recording.common.RecordingConfig;
  * <p>Implement this interface to handle recording events such as user join/leave,
  * audio/video frame reception, connection state changes, and error notifications.</p>
  *
- * @author [@Loong Wan](https://github.com/loong10k)
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 3.0.0
  * @see DefaultRecordingEventHandler
  * @see RecordingSDK
