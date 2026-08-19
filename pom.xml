@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.easy4j</groupId>
     <artifactId>agora-java-sdk</artifactId>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/easy-4-java/${project.artifactId}</url>
     <description>Agora Cloud Recording Java SDK (Spring Boot Independent)</description>
+    <version>1.0.x.20260630-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <!-- 开源协议采用 Apache 2.0 协议 -->
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
 
@@ -35,8 +38,6 @@
             <timezone>+8</timezone>
         </developer>
     </developers>
-    <version>1.0.x.20260630-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <!-- 版本属性定义：Java 版本、依赖版本与 Maven 插件版本统一管理 -->
     <properties>
@@ -192,7 +193,6 @@
             </plugins>
         </pluginManagement>
         <plugins>
-
             <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
             <plugin>
                 <!-- 覆盖率插件：生成覆盖率报告并校验测试覆盖率（目标 90%） -->
@@ -270,7 +270,6 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
                     <failOnError>false</failOnError>
                 </configuration>
                 <executions>
@@ -316,7 +315,6 @@
     <!-- 构建 Profile 配置 -->
     <profiles>
         <!-- 发布到 Maven Central Portal：mvn -Pcentral deploy（GPG 签名 + 源码 + Javadoc + Central 发布插件） -->
-
         <profile>
             <id>central</id>
             <build>
@@ -338,7 +336,6 @@
                             </execution>
                         </executions>
                     </plugin>
-
                     <!-- https://mvnrepository.com/artifact/org.sonatype.central/central-publishing-maven-plugin -->
                     <plugin>
                         <!-- 发布插件：将制品发布到 Maven Central Portal -->
