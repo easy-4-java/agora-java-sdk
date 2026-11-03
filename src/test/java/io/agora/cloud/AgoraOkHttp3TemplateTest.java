@@ -195,6 +195,21 @@ class AgoraOkHttp3TemplateTest {
         assertNotNull(builder);
     }
 
+    @Test
+    void shouldSerializeGuavaRequestBodyWithJackson() throws Exception {
+        okhttp3.HttpUrl url = okhttp3.HttpUrl.parse("http://localhost/api");
+        java.util.Map<String, Object> body = com.google.common.collect.ImmutableMap.of(
+                "channel", "room-1", "uid", 42);
+        Request request = template.createRequestBuilder(url,
+                AgoraOkHttp3Template.HttpMethod.POST, null, body).build();
+        okio.Buffer buffer = new okio.Buffer();
+        request.body().writeTo(buffer);
+        com.fasterxml.jackson.databind.JsonNode json = new ObjectMapper().readTree(buffer.readUtf8());
+        assertEquals("room-1", json.get("channel").asText());
+        assertEquals(42, json.get("uid").asInt());
+        assertEquals("application/json;charset=UTF-8", request.body().contentType().toString());
+    }
+
     // --- MediaType constants ---
     @Test
     void shouldHaveMediaTypeConstants() {
